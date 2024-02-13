@@ -1,0 +1,34 @@
+<div
+  #pageWrapper
+  *ngFor="let page of pages; let i = index"
+  [ngClass]="{ page: true, 'sub-page': i > 0 }"
+>
+  <div class="page letter_portrait96ppi">
+    <header class="header">Page header</header>
+    <table>
+      <thead>
+        <tr>
+          <th>Asset Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <section *ngFor="let asset of page.assetDtoList">
+          <tr>
+            <td>
+              <strong>{{ asset.assetName }}</strong>
+            </td>
+          </tr>
+          <tr *ngFor="let fund of asset.fundDtoList; index as i">
+            <td>{{ i }}:{{ fund.fundName }}</td>
+          </tr>
+        </section>
+      </tbody>
+    </table>
+    <footer>
+      <div class="page-number-wrapper">
+        Page Footer
+        <p class="pages">1</p>
+      </div>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+p {
+  font-family: Lato;
+}
+
+.letter_portrait96ppi {
+  width: 400px;
+  height: 970px;
+  border: 2px solid red;
+  margin-bottom: 200px;
+  /* overflow:hidden; */
+}
